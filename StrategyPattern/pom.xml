@@ -6,10 +6,12 @@
     <parent>
         <groupId>org.sylphy</groupId>
         <artifactId>DesignPatterns</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>0.0.1</version>
     </parent>
 
-    <artifactId>ChainOfResponsibility</artifactId>
+    <packaging>jar</packaging>
+
+    <artifactId>StrategyPattern</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
