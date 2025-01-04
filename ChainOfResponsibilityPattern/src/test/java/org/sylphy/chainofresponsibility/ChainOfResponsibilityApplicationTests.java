@@ -1,5 +1,6 @@
 package org.sylphy.chainofresponsibility;
 
+import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
@@ -12,10 +13,10 @@ import org.sylphy.chainofresponsibility.factory.ProductChainFactory;
 @SpringBootTest
 @RunWith(SpringRunner.class)
 class ChainOfResponsibilityApplicationTests {
-    @Autowired
+    @Resource
     private ProductChainFactory productChainFactory1;
 
-    @Autowired
+    @Resource
     private ProductChainFactory productChainFactory2;
 
     @Test

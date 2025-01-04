@@ -24,6 +24,7 @@
     <modules>
         <module>ChainOfResponsibilityPattern</module>
         <module>StrategyPattern</module>
+        <module>SingletonPattern</module>
     </modules>
     <scm>
         <connection/>
