@@ -14,7 +14,7 @@ import lombok.extern.slf4j.Slf4j;
 public class DclSingleton {
     private static volatile DclSingleton instance;
     private DclSingleton() {
-        System.out.println("DclSingleton is created");
+        log.info("DclSingleton is created");
     }
     public static DclSingleton getInstance() {
         if (instance != null) {
@@ -28,6 +28,6 @@ public class DclSingleton {
         return instance;
     }
     public void someMethod() {
-        System.out.println("DclSingleton someMethod");
+        log.info("DclSingleton someMethod");
     }
 }

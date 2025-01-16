@@ -10,12 +10,9 @@ import lombok.Setter;
  * @Version: 1.0
  * @description:
  */
+@Setter
 public abstract class IHandler<T, R> {
     private IHandler<T, R> nextHandler;
-
-    public void setNextHandler(IHandler<T, R> nextHandler) {
-        this.nextHandler = nextHandler;
-    }
 
     public boolean hasNext() {
         return this.nextHandler != null;

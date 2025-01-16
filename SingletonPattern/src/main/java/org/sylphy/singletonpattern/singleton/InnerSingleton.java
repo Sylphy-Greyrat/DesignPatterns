@@ -1,6 +1,8 @@
 package org.sylphy.singletonpattern.singleton;
 
 
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * @className: InnerSingleton
  * @author: Sylphy
@@ -8,9 +10,10 @@ package org.sylphy.singletonpattern.singleton;
  * @Version: 1.0
  * @description:
  */
+@Slf4j
 public class InnerSingleton {
     private InnerSingleton() {
-        System.out.println("InnerSingleton is created");
+        log.info("InnerSingleton is created");
     }
 
     public static InnerSingleton getInstance() {
@@ -18,7 +21,7 @@ public class InnerSingleton {
     }
 
     public void someMethod() {
-        System.out.println("InnerSingleton someMethod");
+        log.info("InnerSingleton someMethod");
     }
 
     private static class Singleton {

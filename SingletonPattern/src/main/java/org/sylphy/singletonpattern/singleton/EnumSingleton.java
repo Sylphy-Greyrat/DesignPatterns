@@ -2,6 +2,7 @@ package org.sylphy.singletonpattern.singleton;
 
 
 import lombok.NoArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * @className: EnumSingleton
@@ -10,11 +11,12 @@ import lombok.NoArgsConstructor;
  * @Version: 1.0
  * @description:
  */
+@Slf4j
 @NoArgsConstructor
 public enum EnumSingleton {
     INSTANCE;
 
     public void someMethod() {
-        System.out.println("EnumSingleton someMethod");
+        log.info("EnumSingleton someMethod");
     }
 }
