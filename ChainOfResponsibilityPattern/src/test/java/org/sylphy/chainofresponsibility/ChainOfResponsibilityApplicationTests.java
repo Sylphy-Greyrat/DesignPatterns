@@ -14,10 +14,10 @@ import org.sylphy.chainofresponsibility.factory.ProductChainFactory;
 @RunWith(SpringRunner.class)
 class ChainOfResponsibilityApplicationTests {
     @Resource
-    private ProductChainFactory productChainFactory1;
+    private ProductChainFactory<String, String> productChainFactory1;
 
     @Resource
-    private ProductChainFactory productChainFactory2;
+    private ProductChainFactory<Object, String> productChainFactory2;
 
     @Test
     void test1() {
@@ -26,7 +26,7 @@ class ChainOfResponsibilityApplicationTests {
 
     @Test
     void test2() {
-        System.out.println(productChainFactory2.execute("1"));
+        System.out.println(productChainFactory2.execute(new StringBuilder()));
     }
 
 }

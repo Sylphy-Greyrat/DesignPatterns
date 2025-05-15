@@ -14,7 +14,7 @@ import java.util.List;
  * @description:
  */
 public class ProductChainFactory<T, R> {
-    private IHandler<T, R> firstHandler;
+    private final IHandler<T, R> firstHandler;
 
     public ProductChainFactory(List<IHandler<T, R>> handlers) {
         Assert.notEmpty(handlers, "无责任实现Bean");

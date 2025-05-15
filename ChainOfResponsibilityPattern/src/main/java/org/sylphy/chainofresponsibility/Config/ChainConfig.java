@@ -18,12 +18,12 @@ import java.util.List;
 @Configuration
 public class ChainConfig {
     @Bean
-    public ProductChainFactory productChainFactory1(List<IHandler<String, String>> handlers) {
-        return new ProductChainFactory(handlers);
+    public ProductChainFactory<String, String> productChainFactory1(List<IHandler<String, String>> handlers) {
+        return new ProductChainFactory<>(handlers);
     }
 
     @Bean
-    public ProductChainFactory productChainFactory2(List<IHandler<Object, String>> handlers) {
-        return new ProductChainFactory(handlers);
+    public ProductChainFactory<Object, String> productChainFactory2(List<IHandler<Object, String>> handlers) {
+        return new ProductChainFactory<>(handlers);
     }
 }

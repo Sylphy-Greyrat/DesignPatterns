@@ -17,7 +17,7 @@ import org.sylphy.chainofresponsibility.chain.IHandler;
 public class ProductTwoHandler extends IHandler<String, String> {
     @Override
     public String handle(String string) {
-        System.out.println("2");
+        System.out.println(string);
         return "<String, String>";
     }
 }

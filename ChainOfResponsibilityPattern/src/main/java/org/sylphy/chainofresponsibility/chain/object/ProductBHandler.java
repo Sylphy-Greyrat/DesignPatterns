@@ -16,8 +16,10 @@ import org.sylphy.chainofresponsibility.chain.IHandler;
 @Order(2)
 public class ProductBHandler extends IHandler<Object, String> {
     @Override
-    public String handle(Object string) {
-        System.out.println("b");
-        return "<Object, String>";
+    public String handle(Object object) {
+        if (object instanceof StringBuilder stringBuilder) {
+            stringBuilder.append("B");
+        }
+        return object.toString();
     }
 }
