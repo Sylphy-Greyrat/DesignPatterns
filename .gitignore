@@ -9,6 +9,7 @@
 
 ## ide
 **/.idea
+**/.idea/**
 *.iml
 rebel.xml
 
