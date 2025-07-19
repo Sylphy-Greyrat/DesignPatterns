@@ -1,4 +1,4 @@
-package org.sylphy.strategy.strategy;
+package org.sylphy.strategy.generics.strategy;
 
 
 import lombok.RequiredArgsConstructor;
@@ -13,12 +13,13 @@ import org.springframework.stereotype.Component;
  * @description:
  */
 @Slf4j
-@Component
+@Component("genericsTwo")
 @RequiredArgsConstructor
-public class TwoStrategy implements BaseStrategy {
+public class TwoStrategy implements BaseStrategy<String> {
 
     @Override
     public void handle(String string) {
-        System.out.println("2");
+        System.out.println(string);
+        log.info("2");
     }
 }

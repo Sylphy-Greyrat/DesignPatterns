@@ -1,4 +1,4 @@
-package org.sylphy.strategy.strategy;
+package org.sylphy.strategy.generics.strategy;
 
 
 /**
@@ -8,6 +8,6 @@ package org.sylphy.strategy.strategy;
  * @Version: 1.0
  * @description:
  */
-public interface BaseStrategy {
-    void handle(String string);
+public interface BaseStrategy<T> {
+    void handle(T t);
 }

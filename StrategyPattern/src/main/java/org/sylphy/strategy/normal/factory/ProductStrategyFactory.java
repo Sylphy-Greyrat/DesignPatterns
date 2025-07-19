@@ -1,12 +1,12 @@
-package org.sylphy.strategy.factory;
+package org.sylphy.strategy.normal.factory;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.sylphy.strategy.strategy.BaseStrategy;
+import org.sylphy.strategy.normal.strategy.BaseStrategy;
 
 import java.util.Map;
 
-@Component
+@Component("normal")
 public class ProductStrategyFactory {
     private final Map<String, BaseStrategy> handlerMap;
 

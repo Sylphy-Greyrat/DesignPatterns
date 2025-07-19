@@ -3,12 +3,11 @@ package org.sylphy.strategy;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
-import org.sylphy.strategy.factory.ProductStrategyFactory;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.sylphy.strategy.normal.factory.ProductStrategyFactory;
 
 /**
  * @className: StratrgyApplication
@@ -19,18 +18,18 @@ import org.sylphy.strategy.factory.ProductStrategyFactory;
  */
 @Slf4j
 @SpringBootTest
-@RunWith(SpringRunner.class)
-class StratrgyApplicationTests {
+@ExtendWith(SpringExtension.class)
+class NormalStrategyApplicationTests {
     @Autowired
     private ProductStrategyFactory productStrategyFactory;
 
     @Test
-    void test1() {
-        productStrategyFactory.getHandler("oneStrategy").handle("1");
+    public void test1() {
+        productStrategyFactory.getHandler("normalOne").handle("1");
     }
 
     @Test
-    void test2() {
-        productStrategyFactory.getHandler("twoStrategy").handle("1");
+    public void test2() {
+        productStrategyFactory.getHandler("normalTwo").handle("1");
     }
 }
